@@ -2,7 +2,7 @@
 These libraries support LCM1602A-14 LCD module I2C and SPI communication with NodeMCU ESP8266, official Arduino and Maker (Cytron Product).
 
 # Update Notice
-> These libraries were built just in fundamental function. So, there a lot of features that we can update together! You are encouraged to improve the code for your purposed and better application by pulling request from me or modify by yourself. Cheers!
+> These libraries were built with fundamental function. So, there a lot of features that we can update together! You are encouraged to improve the code for your purposed and better application by pulling request from me or modify by yourself. Cheers!
 
 > UPDATE 1.0
 >> two features added; scroll left to right; scroll right to left 
