@@ -1,0 +1,26 @@
+###########################################
+# Syntax Coloring Map For lcd_spi
+###########################################
+
+###########################################
+# Datatypes (KEYWORD1)
+###########################################
+
+lcd_spi	KEYWORD1
+
+###########################################
+# Methods and Functions (KEYWORD2)
+###########################################
+begin	KEYWORD2
+clear	KEYWORD2
+pinSPI	KEYWORD2
+noDisplay	KEYWORD2
+display	KEYWORD2
+createChar	KEYWORD2
+setCursor	KEYWORD2
+print	KEYWORD2
+load_custom_character	KEYWORD2
+printstr	KEYWORD2
+###########################################
+# Constants (LITERAL1)
+###########################################
