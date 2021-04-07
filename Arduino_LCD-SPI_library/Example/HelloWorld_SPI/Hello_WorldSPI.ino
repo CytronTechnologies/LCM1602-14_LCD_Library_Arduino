@@ -37,37 +37,18 @@
 
 #include <lcd_spi.h> //Import lcd_spi library
 
-
 lcd_spi lcd(D8); // Chip Selected Pin (CS), D8 for NodeMCU V3 ESP8266, 10 for any Arduino and Maker
-char text[] = "I AM DISPLAY HELLO WORLD ON LCM1602-14";//Write your text here
-
 
 void setup() {
   // put your setup code here, to run once:
   
   lcd.begin(16,2); //LCD intialization, column and row setup setting  
+  lcd.setCursor(0, 0); //cursor setting function start with column followed by row
+  lcd.print("Hello World!");
 
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  delay(1000);
-  lcd.clear();
-  unsigned int k=0;
-  //cursor setting function start with column followed by row
-  lcd.setCursor(0, 0); 
-  
-  while(text[k]!='\0')
-  {
-   lcd.print(text[k]);
-   
-    if(k>15)
-    {
-      lcd.scrollDisplayLeft(); //Scrolling text to Left
-    }
-     delay(500);
-     k++;
-  } 
-  // clear screen for the next loop
+  // Do nothing here
 
 }
