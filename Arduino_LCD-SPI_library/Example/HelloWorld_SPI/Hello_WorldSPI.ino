@@ -45,7 +45,7 @@ void setup()
   
   lcd.begin(16,2); //LCD intialization, column and row setup setting  
   lcd.setCursor(0, 0); //cursor setting function start with column followed by row
-  lcd.print("Hello World!");
+  lcd.print("Hello World!"); //Print text
 
 }
 
