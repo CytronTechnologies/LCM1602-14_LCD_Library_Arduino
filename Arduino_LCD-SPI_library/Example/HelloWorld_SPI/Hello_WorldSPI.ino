@@ -39,7 +39,8 @@
 
 lcd_spi lcd(D8); // Chip Selected Pin (CS), D8 for NodeMCU V3 ESP8266, 10 for any Arduino and Maker
 
-void setup() {
+void setup() 
+{
   // put your setup code here, to run once:
   
   lcd.begin(16,2); //LCD intialization, column and row setup setting  
@@ -48,7 +49,7 @@ void setup() {
 
 }
 
-void loop() {
+void loop() 
+{
   // Do nothing here
-
 }
