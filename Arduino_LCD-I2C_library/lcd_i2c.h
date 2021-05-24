@@ -4,7 +4,6 @@
 #include <inttypes.h>
 #include <Arduino.h>
 #include <Wire.h>
-#include <Print.h>
 
 //Instruction Set
 #define CLEARDISPLAY 0X01
@@ -44,7 +43,7 @@
 #define _8BITMODE 0x10
 #define _4BITMODE 0x00
 
-class lcd_i2c : public Print{
+class lcd_i2c{
 public:
   lcd_i2c(uint8_t _addr, uint8_t _cols, uint8_t _rows, uint8_t _charsize = _5x8DOTS);
 
@@ -56,10 +55,10 @@ public:
   void scrollDisplayLeft();  
   
   void setCursor(uint8_t, uint8_t);
-  virtual size_t write(uint8_t);
+  void write(uint8_t);
   void command(uint8_t);
 
-  void printstr(const char[]);
+  void print(const char[]);
   
 private:
 
