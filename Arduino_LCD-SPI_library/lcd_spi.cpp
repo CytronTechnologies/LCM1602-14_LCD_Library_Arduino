@@ -97,6 +97,7 @@ inline void lcd_spi::write(uint8_t value)
 	buffs[0] |= value >> 1;
 	buffs[1] = (value & 1) << 7;
 	delayMicroseconds(10000);
+	
 	digitalWrite(cs,LOW);
 	SPI.transfer(buffs[0]);
 	SPI.transfer(buffs[1]);
