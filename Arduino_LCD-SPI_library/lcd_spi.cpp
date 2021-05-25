@@ -90,7 +90,7 @@ inline void lcd_spi::command(uint8_t value)
 	delayMicroseconds(1);
 }
 
-inline size_t lcd_spi::write(uint8_t value)
+inline void lcd_spi::write(uint8_t value)
 {
 	int buffs[2];
 	buffs[0] = 0x80;
@@ -104,7 +104,11 @@ inline size_t lcd_spi::write(uint8_t value)
 	delayMicroseconds(1);   
 }
 
-void lcd_spi::printstr(const char c[])
+void lcd_spi::print(const char c[])
 {
-	print(c);
+	for(int i =0; i < strlen(c); i++ ) 
+	{
+		char x = c[i];
+		write((int)x);
+	}
 }
