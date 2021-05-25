@@ -2,7 +2,6 @@
 #define lcd_spi_h
 
 #include <inttypes.h>
-#include "Print.h"
 #include <SPI.h>
 
 //Instruction Set
@@ -45,7 +44,7 @@
 
 
 
-class lcd_spi : public Print
+class lcd_spi
 {
     public:
         lcd_spi(uint8_t ssPin);
@@ -58,9 +57,9 @@ class lcd_spi : public Print
         void scrollDisplayRight();
 
         void setCursor(uint8_t, uint8_t);
-        virtual size_t write(uint8_t);
+        void write(uint8_t);
         void command(uint8_t);
-        void printstr(const char[]);
+        void print(const char[]);
         
     
     private:
